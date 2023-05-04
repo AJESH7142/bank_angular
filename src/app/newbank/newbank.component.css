@@ -1,0 +1,74 @@
+h2{
+   text-transform: capitalize;
+   font-weight: 900;
+   
+   color: violet;
+}
+.container{
+   display: grid;
+   place-items: center;
+   background-color: rgba(177, 177, 249, 0.412);
+   border-radius: 5px;
+}
+.container:hover{
+   background-color:  rgba(177, 177, 249, 0.603);
+}
+.lb{
+   color: rgb(0, 0, 255);
+   text-transform: capitalize;
+   font-size: 18px;
+   filter: drop-shadow(2px 10px 8px yellow);
+}
+.inp{
+   border: none;
+   outline: none;
+   padding: 11px 17px;
+   border-radius: 3px;
+   background-color: rgb(222, 227, 254);
+   caret-color: red;
+   color: blue;
+}
+.button1{
+   color: blue;
+   padding: 6px 10px;
+   margin-top: 30px;
+   border: none;
+   background-color: rgba(255, 255, 0, 0.445);
+   text-transform: capitalize;
+   border-radius: 4px;
+}
+.button1:hover{
+   color: rgba(255, 255, 0, 0.445);
+   background-color: rgba(0, 0, 255, 0.201);
+}
+a{
+   text-decoration: none;
+   color: rgb(0, 255, 153);
+   text-transform: capitalize;
+}
+a:hover{
+   color: blue;
+}
+p{
+   color: rgb(255, 97, 134);
+   text-transform: capitalize;
+}
+h3{
+   text-transform: capitalize;
+   color: cadetblue;
+   padding: 10px;
+}
+
+@media (width < 500px){
+   h3{
+      text-align: center;
+      font-size: 30px;
+   }
+   p{
+      display: block;
+   }
+}
+::placeholder{
+   color: rgb(153, 23, 23);
+   text-transform: capitalize;
+}
