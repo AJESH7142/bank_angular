@@ -67,3 +67,46 @@ html - view
 
    1.2.2 - $event binding  (eventName) = "methodName($event)" eg: change - for accessing changed value.
    we get data when this event works
+
+   <input (change) = "unameChange($event)" in html file
+   
+   class something {
+      uname:any
+
+      unameChange(event:any){
+         this.uname = event.target.value
+      }
+   }
+
+   1.2.3 - data binding with template rendering variable #variable
+
+   <input #uname >
+   <input #psw >
+
+   <button (click) = "input(uname,psw)"  in html
+
+   login(a:any, b:any){
+      console.log(a.value, b.value);
+
+      alert("login clicked")
+   }  in ts
+
+   if we want to store the values to variables:
+
+   <input #uname>
+   <input #psw>
+
+   <button (click) = "input(uname,psw)" in html
+
+
+   class something{
+      user:any
+      password:any
+   }
+
+   input(a.value, b.value){
+      this.user = a.value
+      this.password = b.value
+
+      console.log(this.user, this.password)
+   }

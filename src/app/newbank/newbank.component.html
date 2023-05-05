@@ -3,12 +3,12 @@
    <div class="container">
       <h2>bank login</h2>
       <label for="us" class="lb">Username</label><br>
-      <input (change)="uNamechange($event)" type="text" id="us" class="inp" [placeholder]="placeHolderData"><br>
+      <input #uname type="text" id="us" class="inp" [placeholder]="placeHolderData"><br>
       <!-- <label for="us" class="lb">username</label><br>
       <input type="text" id="us" class="inp"><br> -->
       <label for="ps" class="lb">password</label><br>
-      <input (change)="upassChange($event)" type="password" id="ps" class="inp" [placeholder]="passwordData">
-      <button (click)="login()" type="button" id="btn" class="button1">sign in</button>
+      <input #psw type="password" id="ps" class="inp" [placeholder]="passwordData">
+      <button (click)="login(uname, psw)" type="button" id="btn" class="button1">sign in</button>
       <p>don't have account? <a href="#"><strong>create account</strong></a></p>
    </div>
 </form>
