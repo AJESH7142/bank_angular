@@ -14,7 +14,7 @@ Decorators
 - we call html, css in typescript file
 
 
-- ngOnInit() - abstract method, we don't have to call it separately
+- ngOnInit() - abstract method, we don't have to call it separately, and is a life cycle hook in angular thet is used to perform initialization tasks for a component. It is a method that is called after the component has been created and the input have been bound for the first time. ngOnInit() method is a part of "OnInit" interface in Angular. when a component implements this interface, it must provide an implementation for the "ngOnInit()" method
 
 
 life cycle of angular(working cycle)
@@ -55,7 +55,7 @@ html - view
 
    1.1.2 - property binding []
 
-   [propertyName] = "bindingData
+   [propertyName] = "bindingData"
 
 1.2 view to component(html to ts)
 --------------------------------
@@ -78,12 +78,12 @@ html - view
       }
    }
 
-   1.2.3 - data binding with template rendering variable #variable
+   1.2.3 - data binding with template rendering variable eg: #variable
 
    <input #uname >
    <input #psw >
 
-   <button (click) = "input(uname,psw)"  in html
+   <button (click) = "login(uname,psw)"  in html
 
    login(a:any, b:any){
       console.log(a.value, b.value);
@@ -110,3 +110,39 @@ html - view
 
       console.log(this.user, this.password)
    }
+
+2 - two way data binding
+------------------------
+
+we need to intall another module
+
+html to ts(view to component)
+
+- formsModule - module(file)
+-----------
+
+2.1 - ngModel(method)  [(ngModel)] - event inside property module
+[(ngModel)] ="variable"
+
+package - collection of modules(folder)
+module - collection of class(file)
+class - collection of variables and methods
+
+should be written inside app.module.ts inside import field
+
+<input [(ngModel)] = "uname" id = "us"
+name = "uname"...>
+<input [(ngModel)] = "psw" id = "ps" name = "psw"...>   (imp - id and name attributes are must for this kind of binding)
+
+<button type = "button" (click) = "login()"
+
+class anything{
+   uname:any
+   psw:any
+
+
+   login(){
+      alert(this.uname)
+      alert(this.psw)
+   }
+}

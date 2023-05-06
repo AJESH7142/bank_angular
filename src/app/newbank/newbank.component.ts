@@ -10,10 +10,10 @@ export class NewbankComponent implements OnInit{
   data = "banking is easy!"
   placeHolderData = "User name"
   // click = "click"
-  //  
-  user:any
-  password:any
-  inpt:any
+  // 
+  uname:any
+  psw:any 
+  
   constructor(){
     this.passwordData = "password"
   } // creation and initialisation at the same time
@@ -21,18 +21,10 @@ export class NewbankComponent implements OnInit{
   ngOnInit(): void {
     
   }
-  login(a:any, b:any){
+  login(){
     // console.log(a.value, b.value);
-    this.user = a.value
-    this.password = b.value
-    this.inpt = {
-      usrdta:this.user, pswrsdta:this.password
-    }
-    console.log(this.user, this.password);
-    
-    localStorage.setItem(this.user, JSON.stringify(this.inpt))
-    alert("login clicked")
-    
+    alert(`your name is ${this.uname}`)
+    alert(`your password is ${this.psw}`)
   }
   // uNamechange(event:any){
   //   this.uname = event.target.value;
