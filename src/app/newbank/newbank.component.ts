@@ -26,9 +26,9 @@ export class NewbankComponent implements OnInit{
     // console.log(a.value, b.value);
     alert(`your name is ${this.uname}`)
     alert(`your password is ${this.psw}`)
-    alert(this.ds.sdata) //data
-    alert(this.ds.checkData()) //method
-
+    // alert(this.ds.sdata) //data
+    // alert(this.ds.checkData()) //method
+    alert(`${this.ds.sdata} and ${this.ds.checkData()}`)
   }
   // uNamechange(event:any){
   //   this.uname = event.target.value;

@@ -186,4 +186,39 @@ accessSpecifier referenceName:className
 
 constructor(accessSpecifier referenceName:className){
 
+   sdata = "service data"
+
+   constructor(){
+
+   }
+
+   checkData(){
+      return "hello hi"
+   }
+}
+
+first import class DataService to class NewBankComponents
+
+in data.service file
+
+export class DataService{
+
+}
+
+in NewBankComponent file make an object of class DataService inside constructor
+
+
+- export class NewbankComponent implements OnInit{
+
+   constructor(private ds:DataService){
+
+   }
+
+   ngOnInit():void {}
+
+   login(){
+
+      alert(this.ds.sdata)
+      alert(this.ds.checkData())
+   }
 }
