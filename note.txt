@@ -146,3 +146,44 @@ class anything{
       alert(this.psw)
    }
 }
+
+
+Angular Services
+----------------
+data communication between components
+
+component1, component2, etc
+components cannot access data from one another 
+
+service is the common location that all the components can access data from (service is a ts file)
+the common data needed for all the components should be in service file
+one service file for one module
+
+
+command for creating service
+
+- ng g s serviceFileName(ng = angular, g = generate, s = service)
+
+dependancy injection
+--------------------
+ - to use methods and variables from a class to another component class
+
+   we can determine who to access data, if public, all the classes inside the module(file), if private only that class the injected class defined can use it.
+  accessSpecifier - public, private
+
+  if we do dependency injection public, it can be used by all the classes in the module can use the injected class
+
+  if the dependency injection is private it can only be used inside the class of a module it defined
+
+  api calls are done inside service file
+  one service for one module
+   (dependancy injection is used when we want any data or methods in a perticular component to be used inside another component)
+  
+
+service file is created ./src/app/service
+
+accessSpecifier referenceName:className
+
+constructor(accessSpecifier referenceName:className){
+
+}

@@ -1,6 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova&family=Bree+Serif&family=Mulish&family=Poppins:ital@1&family=Rampart+One&family=Rubik+Gemstones&family=Shadows+Into+Light&family=Shantell+Sans&family=Tilt+Prism&display=swap');
 body{
    background-image: url(./assets/istockphoto-1250581414-612x612.jpg);
    background-size: cover;
+   margin: 0;
+   padding: 0;
+}
+.nav1{
+   box-shadow: inset 2px 2px 10px 2px rgb(0, 119, 255);
+   position: sticky;
+   top: 0;
+}
+.obs{
+   color: rgba(245, 245, 220, 0.607);
+   text-align: right;
+   text-transform: capitalize;
+   filter: drop-shadow(5px 2px 2px blue);
+   font-family: 'Bree Serif', serif;
+   padding: 0 10px;
+}
+.foot1{
+   margin-bottom: 0;
+   background-color: white;
+   text-align: center;
+   text-transform: capitalize;
+}
+.foot1::first-letter{
+   color: red;
+   font-weight: 600;
+   font-size: 17px;
 }
 

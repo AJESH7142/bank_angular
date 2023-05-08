@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../service/data.service';
 
 @Component({  //decorators - it is used for meta data
   selector: 'app-newbank',
@@ -14,7 +15,7 @@ export class NewbankComponent implements OnInit{
   uname:any
   psw:any 
   
-  constructor(){
+  constructor(private ds:DataService){
     this.passwordData = "password"
   } // creation and initialisation at the same time
 
@@ -25,6 +26,9 @@ export class NewbankComponent implements OnInit{
     // console.log(a.value, b.value);
     alert(`your name is ${this.uname}`)
     alert(`your password is ${this.psw}`)
+    alert(this.ds.sdata) //data
+    alert(this.ds.checkData()) //method
+
   }
   // uNamechange(event:any){
   //   this.uname = event.target.value;
@@ -32,3 +36,4 @@ export class NewbankComponent implements OnInit{
   // }
   
 }
+//accessSpecifier referenceName:className  inside constructor normal bracket 
