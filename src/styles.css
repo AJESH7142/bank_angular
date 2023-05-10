@@ -1,8 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova&family=Bree+Serif&family=Mulish&family=Poppins:ital@1&family=Rampart+One&family=Rubik+Gemstones&family=Shadows+Into+Light&family=Shantell+Sans&family=Tilt+Prism&display=swap');
 body{
-   background-image: url(./assets/istockphoto-1250581414-612x612.jpg);
-   background-size: cover;
+   
    margin: 0;
    padding: 0;
 }

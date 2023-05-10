@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewbankComponent } from './newbank/newbank.component';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewbankComponent
+    NewbankComponent,
+    RegisterComponent,
+    HomePageComponent
   ],
   imports: [   //available at all the components under it
     BrowserModule,

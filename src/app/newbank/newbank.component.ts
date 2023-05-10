@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
+import { Router } from '@angular/router';
 
 @Component({  //decorators - it is used for meta data
   selector: 'app-newbank',
@@ -11,12 +12,14 @@ export class NewbankComponent implements OnInit{
   data = "banking is easy!"
   placeHolderData = "User name"
   // click = "click"
+  clickData:any
   // 
   uname:any
   psw:any 
   
-  constructor(private ds:DataService){
+  constructor(private rout:Router){
     this.passwordData = "password"
+    this.clickData = "click here"
   } // creation and initialisation at the same time
 
   ngOnInit(): void {
@@ -26,9 +29,10 @@ export class NewbankComponent implements OnInit{
     // console.log(a.value, b.value);
     alert(`your name is ${this.uname}`)
     alert(`your password is ${this.psw}`)
+    this.rout.navigateByUrl("home")
     // alert(this.ds.sdata) //data
     // alert(this.ds.checkData()) //method
-    alert(`${this.ds.sdata} and ${this.ds.checkData()}`)
+    
   }
   // uNamechange(event:any){
   //   this.uname = event.target.value;

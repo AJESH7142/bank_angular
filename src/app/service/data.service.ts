@@ -5,12 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
-  sdata = "service data"
-
   constructor() { }
 
-  checkData(){
-    return "hello hi"
-  }
 }
 //any component can access this variable and method

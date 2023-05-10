@@ -104,7 +104,7 @@ html - view
       password:any
    }
 
-   input(a.value, b.value){
+   input(a:any, b:any){
       this.user = a.value
       this.password = b.value
 
@@ -221,4 +221,43 @@ in NewBankComponent file make an object of class DataService inside constructor
       alert(this.ds.sdata)
       alert(this.ds.checkData())
    }
+}
+
+- we do api calls inside service file
+
+Angular Routing(for redirection)
+  -------------------------------
+
+  AppRoutingModule - module used to do redirection
+  Router - class
+  navigateByurl() - method helps redirection
+  href - routerLink
+
+  for routing we need to set the path inside app-routing-module.ts
+  
+
+  const routes: Routes = [
+  {path:"",component:NewbankComponent },
+  {path:"register",component:RegisterComponent},
+  {path:"home",component:HomePageComponent}
+];
+
+path:"" - 4200
+
+but every time we change the path the content of the main page that is newbank component does not change, because we called <app-new-bank> (selector)inside the root view called app.component.html, we need to change this to <router-outlet>
+
+
+to redirect to any page when we click the link "Create Account" we should add
+<a routerLink = "register"></a>
+
+to redirect to any page when we click button "sign in" 
+
+in newbank.components.ts file, 
+
+constructor(private rout:router){
+
+}
+
+login(){
+   this.rout.navigateByUrl("home")
 }

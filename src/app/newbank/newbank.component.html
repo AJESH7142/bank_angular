@@ -9,7 +9,7 @@
       <label for="ps" class="lb">password</label><br>
       <input [(ngModel)] = "psw" type="password" id="ps" name = "psw1" class="inp" [placeholder]="passwordData">
       <button (click)="login()" type="button" id="btn" class="button1">sign in</button>
-      <p>don't have account? <a href="#"><strong>create account</strong></a></p>
+      <p>don't have account? <a routerLink="register" [title]="clickData"><strong>create account</strong></a></p>
    </div>
 </form>
 
